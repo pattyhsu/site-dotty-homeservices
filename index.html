@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dotty Homeservices</title>
+<meta name="description" content="We buy homes as-is, for cash, across Los Angeles County and Orange County. Dotty Homeservices is a licensed California real estate brokerage.">
+<link rel="canonical" href="https://dottyhomeservices.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Dotty Homeservices — We buy houses. All cash, as-is.">
+<meta property="og:description" content="We buy homes as-is, for cash, across Los Angeles County and Orange County.">
+<meta property="og:image" content="https://dottyhomeservices.com/photos/hero.webp">
+<meta property="og:url" content="https://dottyhomeservices.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#fbfaf6; --bone:#f1ede3; --cream:#e6dfce; --taupe:#a89880;
+  --stone:#57503f; --ink:#0e0c0a; --ink-soft:#2a2520;
+  --accent:#b8543b; --accent-ink:#f6f1e7;
+  --rule:rgba(13,11,9,.18); --rule-soft:rgba(13,11,9,.10);
+  --serif:"Archivo",system-ui,sans-serif;
+  --sans:"Instrument Sans",ui-sans-serif,system-ui,sans-serif;
+  --mw:1200px; --gutter:clamp(16px,5vw,56px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--mw);margin:0 auto;padding:0 var(--gutter)}
+
+
+/* eyebrow / headings */
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+h1,h2,h3{font-family:var(--serif);letter-spacing:-.02em;line-height:1.02}
+h2{font-size:clamp(30px,4.2vw,50px);font-weight:700;margin:.35em 0 .5em}
+h3{font-size:20px;font-weight:600;letter-spacing:-.01em;line-height:1.2}
+.lede{font-size:clamp(17px,1.6vw,20px);color:var(--stone);max-width:36em}
+section{padding:clamp(64px,9vw,120px) 0}
+
+/* masthead — wordmark type matches dottyhomes.com (site-dotty-homes/styles.css .mh-mark):
+   Archivo 800 uppercase, -0.04em tracking, terracotta dot centered between the words.
+   Unlike dottyhomes.com's full-bleed masthead, this one sits in the same .wrap column as
+   the content below, logo left and nav right, so the edges line up with the hero. */
+.masthead{position:sticky;top:0;z-index:20;background:rgba(251,250,246,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule-soft)}
+.mh-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:18px;padding-bottom:18px}
+.mh-nav{display:flex;align-items:center;gap:clamp(18px,2.6vw,36px);font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--ink)}
+.mh-nav a{position:relative;padding:6px 0;display:inline-block}
+.mh-nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.mh-nav a:hover::after{transform:scaleX(1)}
+.mh-nav a:hover{color:var(--accent)}
+.mh-cta{color:var(--accent);font-weight:600}
+.mh-cta::after{transform:scaleX(1)!important}
+.mh-mark{display:inline-flex;align-items:baseline;font-family:var(--serif);font-weight:800;font-size:clamp(18px,1.9vw,26px);line-height:1;letter-spacing:-.04em;text-transform:uppercase;color:var(--ink);white-space:nowrap;transition:color .3s}
+.mh-mark:hover{color:var(--accent)}
+.mh-mark .mh-dot{display:inline-block;width:.15em;height:.15em;border-radius:50%;background:var(--accent);margin:0 .1em;transform:translateY(-.275em)}
+@media (max-width:760px){.mh-nav a:not(.mh-cta){display:none}.mh-nav{font-size:11px;letter-spacing:.14em}.mh-nav a{white-space:nowrap}}
+.btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--sans);font-weight:600;font-size:15px;padding:14px 22px;border-radius:2px;border:1.5px solid var(--ink);transition:.2s}
+.btn-solid{background:var(--ink);color:var(--accent-ink)}
+.btn-solid:hover{background:var(--accent);border-color:var(--accent)}
+.btn-line:hover{background:var(--ink);color:var(--accent-ink)}
+
+/* hero */
+.hero{padding:clamp(40px,6vw,80px) 0 0}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px);align-items:end}
+.hero h1{font-size:clamp(34px,4.6vw,64px);font-weight:800;margin:.3em 0 .35em}
+.hero h1 span{display:block;white-space:nowrap}
+.hero h1 em{font-style:normal;color:var(--accent)}
+@media (max-width:520px){.hero .eyebrow{font-size:11px;letter-spacing:.14em;white-space:nowrap}}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-img{aspect-ratio:4/5;object-fit:cover;width:100%;background:var(--bone)}
+.lic{margin-top:28px;font-size:13px;color:var(--stone)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-img{aspect-ratio:4/3}}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);margin-top:48px;counter-reset:s}
+.step{border-top:2px solid var(--ink);padding-top:22px}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:var(--serif);font-weight:700;color:var(--accent);font-size:15px;letter-spacing:.05em;display:block;margin-bottom:14px}
+.step p{margin-top:10px;color:var(--stone);font-size:16px}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+
+.honest{margin-top:48px;padding:20px 24px;background:var(--bone);border-left:3px solid var(--accent);max-width:46em;font-size:16px;color:var(--ink-soft)}
+.honest b{color:var(--ink)}
+
+/* agents */
+.agents{background:var(--ink);color:var(--accent-ink)}
+.agents .eyebrow{color:#e08a6f}
+.agents .lede{color:#cfc6b4}
+.agents-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:start}
+.terms{list-style:none;border-top:1px solid rgba(246,241,231,.2)}
+.terms li{display:grid;grid-template-columns:190px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid rgba(246,241,231,.2)}
+.terms dt,.terms .k{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#a89880;padding-top:3px}
+.terms .v{font-size:17px}
+.agents .btn{border-color:var(--accent-ink);color:var(--accent-ink);margin-top:32px}
+.agents .btn:hover{background:var(--accent);border-color:var(--accent)}
+@media (max-width:860px){.agents-grid{grid-template-columns:1fr}.terms li{grid-template-columns:1fr;gap:4px}}
+
+/* track record */
+.work-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.work{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(14px,2vw,24px);margin-top:44px}
+.work figure{grid-column:span 2}
+.work figure.big{grid-column:span 3}
+.work img{aspect-ratio:4/3;object-fit:cover;width:100%;background:var(--bone)}
+.work figcaption{display:flex;justify-content:space-between;gap:12px;padding-top:12px}
+.work .city{font-family:var(--serif);font-weight:600;font-size:18px;letter-spacing:-.01em}
+.work .spec{font-size:14px;color:var(--stone)}
+.work .yr{font-size:13px;color:var(--stone);white-space:nowrap}
+.credit{margin-top:28px;font-size:13px;color:var(--stone)}
+@media (max-width:760px){.work figure,.work figure.big{grid-column:span 3}}
+@media (max-width:520px){.work figure,.work figure.big{grid-column:span 6}}
+
+/* markets */
+.markets{background:var(--bone)}
+.mk-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,96px)}
+.mk-list{list-style:none;columns:2;column-gap:40px}
+.mk-list li{break-inside:avoid;padding:16px 0;border-bottom:1px solid var(--rule)}
+.mk-list b{font-family:var(--serif);font-weight:600;font-size:19px;display:block;letter-spacing:-.01em}
+.mk-list span{font-size:14px;color:var(--stone)}
+@media (max-width:860px){.mk-grid{grid-template-columns:1fr}}
+@media (max-width:520px){.mk-list{columns:1}}
+
+/* contact */
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px)}
+.ct-card{background:var(--bone);padding:clamp(24px,3vw,40px);display:grid;gap:22px;align-content:start}
+.ct-card .k{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--stone)}
+.ct-card ul{list-style:none;display:grid;gap:10px;font-size:17px}
+.ct-card li{padding-left:22px;position:relative}
+.ct-card li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.ct-actions{display:grid;gap:12px}
+.ct-actions .btn{justify-content:center;text-align:center;flex-wrap:wrap;column-gap:.35em}
+.nw{white-space:nowrap}
+.ct-card .fine{font-size:13px;color:var(--stone)}
+@media (max-width:860px){.ct-grid{grid-template-columns:1fr}}
+@media (max-width:520px){.row2{grid-template-columns:1fr}}
+
+/* closing strip */
+.closing{padding:clamp(36px,5vw,56px) 0;border-top:1px solid var(--rule-soft)}
+.closing-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.closing p{font-family:var(--serif);font-weight:600;font-size:clamp(20px,2.2vw,28px);letter-spacing:-.01em}
+.closing p a{color:var(--accent);white-space:nowrap}
+
+/* footer */
+footer{border-top:1px solid var(--rule);padding:40px 0 56px;font-size:13.5px;color:var(--stone)}
+.ft{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
+.ft b{color:var(--ink);font-weight:600}
+.ft p+p{margin-top:6px}
+@media (max-width:760px){.ft{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap mh-inner">
+    <a href="#top" class="mh-mark" aria-label="Dotty Homeservices — home">
+      <span class="mh-word">Dotty</span><span class="mh-dot" aria-hidden="true"></span><span class="mh-word">Homeservices</span>
+    </a>
+    <nav class="mh-nav">
+      <a href="#how">How we buy</a>
+      <a href="#contact" class="mh-cta">Get an offer</a>
+      <a href="#work">Our work</a>
+      <a href="#agents">For agents</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Los Angeles County · Orange County</div>
+        <h1><span>We buy houses.</span><span><em>All cash, as-is.</em></span></h1>
+        <p class="lede">We buy homes as-is, for cash, on your timeline. No repairs, no showings, no waiting on a buyer's loan. Dotty Homeservices is a licensed California brokerage.</p>
+        <div class="cta">
+          <a href="#contact" class="btn btn-solid">Tell us about a property →</a>
+          <a href="#agents" class="btn btn-line">I'm a listing agent</a>
+        </div>
+        <p class="lic">CA DRE Corporate License #02431285</p>
+      </div>
+      <img class="hero-img" src="photos/hero.webp" alt="A renovated Dotty home">
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="eyebrow">How we buy</div>
+      <h2>Three steps, no showings.</h2>
+      <p class="lede">You don't have to fix, clean or stage anything. We buy the house in the condition it's in.</p>
+      <div class="steps">
+        <div class="step"><h3>Tell us about the house</h3><p>Send the address and a few details, or have your agent send it. We look at the numbers the same day.</p></div>
+        <div class="step"><h3>Get a written offer</h3><p>We walk the property and send a purchase agreement with a cash price. There are no hidden fees or repair credits.</p></div>
+        <div class="step"><h3>Close through escrow</h3><p>A neutral escrow and title company handles the funds. You choose the closing date, and you can leave behind anything you don't want.</p></div>
+      </div>
+      <p class="honest"><b>Not sure a cash sale is right for you?</b> Ask us. If your house doesn't need much work and listing it would net you more, we'll tell you honestly.</p>
+    </div>
+  </section>
+
+  <section class="markets">
+    <div class="wrap mk-grid">
+      <div>
+        <div class="eyebrow">Where we buy</div>
+        <h2>Single-family homes across LA and Orange County.</h2>
+        <p class="lede">We buy houses that need work, from dated to distressed. No house is too far gone to ask.</p>
+      </div>
+      <ul class="mk-list">
+        <li><b>San Gabriel Valley</b><span>Alhambra, Arcadia, Diamond Bar, Hacienda Heights, Monterey Park, Rowland Heights, San Gabriel, Temple City, Walnut, West Covina</span></li>
+        <li><b>Long Beach area</b><span>Long Beach, Cerritos</span></li>
+        <li><b>South Bay</b><span>Palos Verdes Estates, Rancho Palos Verdes, Torrance</span></li>
+        <li><b>North Orange County</b><span>Anaheim, Brea, Buena Park, Cypress, Fullerton, La Palma, Los Alamitos, Orange, Villa Park, Yorba Linda</span></li>
+        <li><b>Central &amp; coastal Orange County</b><span>Costa Mesa, Fountain Valley, Garden Grove, Huntington Beach, Irvine, Newport Beach, Santa Ana, Seal Beach, Tustin, Westminster</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap ct-grid">
+      <div>
+        <div class="eyebrow">Contact</div>
+        <h2>Tell us about a property.</h2>
+        <p class="lede">Owner or agent, call, text or email us the address and we'll get back to you within one business day.</p>
+      </div>
+      <div class="ct-card">
+        <div>
+          <div class="k">Helpful to include</div>
+        </div>
+        <ul>
+          <li>The property address</li>
+          <li>Its condition, and whether anyone lives there</li>
+          <li>When you'd like to close</li>
+        </ul>
+        <div class="ct-actions">
+          <a class="btn btn-solid" href="tel:+16265039018">Call (626) 503-9018</a>
+          <a class="btn btn-line" href="mailto:offers@dottyhomeservices.com?subject=Property%20for%20Dotty%20Homeservices">Email <span class="nw">offers@dottyhomeservices.com</span></a>
+        </div>
+        <p class="fine">Prefer to text? Send the address to <span class="nw">(626) 503-9018</span>.</p>
+      </div>
+    </div>
+  </section>
+  <section id="work">
+    <div class="wrap">
+      <div class="work-head">
+        <div>
+          <div class="eyebrow">Our work</div>
+          <h2>Homes our team has renovated.</h2>
+        </div>
+        <p class="lede" style="max-width:26em">We restore homes that need work, and the neighborhood gets a finished house back.</p>
+      </div>
+      <div class="work">
+        <figure class="big"><img src="photos/west-covina.webp" alt="Renovated home in West Covina" loading="lazy"><figcaption><div><div class="city">West Covina</div><div class="spec">4 bd · 3 ba · 2,391 sf</div></div><div class="yr">2026</div></figcaption></figure>
+        <figure class="big"><img src="photos/diamond-bar.webp" alt="Renovated home in Diamond Bar" loading="lazy"><figcaption><div><div class="city">Diamond Bar</div><div class="spec">4 bd · 2 ba · 1,831 sf</div></div><div class="yr">2026</div></figcaption></figure>
+        <figure><img src="photos/arcadia.webp" alt="Renovated home in Arcadia" loading="lazy"><figcaption><div><div class="city">Arcadia</div><div class="spec">3 bd · 3 ba · 1,928 sf</div></div><div class="yr">2026</div></figcaption></figure>
+        <figure><img src="photos/orange.webp" alt="Renovated home in Orange" loading="lazy"><figcaption><div><div class="city">Orange</div><div class="spec">3 bd · 2 ba · 1,716 sf</div></div><div class="yr">2026</div></figcaption></figure>
+        <figure><img src="photos/cerritos-sutton.webp" alt="Renovated home in Cerritos" loading="lazy"><figcaption><div><div class="city">Cerritos</div><div class="spec">3 bd · 2 ba · 1,283 sf</div></div><div class="yr">2026</div></figcaption></figure>
+      </div>
+      <p class="credit">Purchased and renovated by <a href="https://dottyhomes.com" style="text-decoration:underline">Dotty Homes</a> and affiliated companies. Photos show each home after renovation.</p>
+    </div>
+  </section>
+
+  <section id="agents" class="agents">
+    <div class="wrap agents-grid">
+      <div>
+        <div class="eyebrow">For listing agents</div>
+        <h2>An offer you can take to your seller.</h2>
+        <p class="lede">We send a purchase agreement and close what we sign. If you have a listing that needs work, or a seller who wants certainty over top dollar, send it our way.</p>
+        <a href="#contact" class="btn">Send us a listing →</a>
+      </div>
+      <ul class="terms">
+        <li><div class="k">Financing</div><div class="v">All cash. No loan or appraisal contingency.</div></li>
+        <li><div class="k">Proof of funds</div><div class="v">Attached to every offer.</div></li>
+        <li><div class="k">Condition</div><div class="v">Bought as-is. No repair requests after inspection.</div></li>
+        <li><div class="k">Investigation</div><div class="v">Short, and written into the offer up front.</div></li>
+        <li><div class="k">Close</div><div class="v">On the seller's timeline.</div></li>
+        <li><div class="k">Your side</div><div class="v">Your commission is paid as listed.</div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap closing-inner">
+      <p>Have a property? Call <a href="tel:+16265039018">(626) 503-9018</a> or send it to us.</p>
+      <a href="#contact" class="btn btn-solid">Get an offer →</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <p><b>Dotty Homeservices, Inc.</b></p>
+        <p>CA DRE Corporate License #02431285</p>
+      </div>
+      <div>
+        <p>2275 Huntington Dr #139</p>
+        <p>San Marino, CA 91108</p>
+        <p>By appointment only</p>
+      </div>
+      <div>
+        <p>Renovation work by <a href="https://dottyhomes.com" style="text-decoration:underline">Dotty Homes</a></p>
+        <p>Equal Housing Opportunity</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
